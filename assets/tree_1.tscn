@@ -1,0 +1,24 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxd5wojdt4hyt"]
+
+[ext_resource type="ArrayMesh" uid="uid://cmhwo1ccr46sb" path="res://assets/imported/tree1.obj" id="1_sqp7o"]
+[ext_resource type="Shader" uid="uid://cqto2eea3axkw" path="res://assets/materials/shaderMat/leaves1.tres" id="2_mxmdb"]
+[ext_resource type="Texture2D" uid="uid://7lcpfaq4xr0h" path="res://assets/textures/tree/bark_other_ufvrbemdy/ufvrbemdy_2K_Albedo.jpg" id="3_trvm4"]
+[ext_resource type="Texture2D" uid="uid://ckpkicvhjgej2" path="res://assets/textures/tree/bark_other_ufvrbemdy/ufvrbemdy_2K_Normal.jpg" id="4_epvc0"]
+[ext_resource type="Texture2D" uid="uid://31ggceolr2gm" path="res://assets/textures/tree/bark_other_ufvrbemdy/ufvrbemdy_2K_Roughness.jpg" id="5_i4j6m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1y35m"]
+render_priority = 0
+shader = ExtResource("2_mxmdb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka2rb"]
+albedo_texture = ExtResource("3_trvm4")
+roughness_texture = ExtResource("5_i4j6m")
+normal_enabled = true
+normal_texture = ExtResource("4_epvc0")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Tree1" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_sqp7o")
+surface_material_override/0 = SubResource("ShaderMaterial_1y35m")
+surface_material_override/1 = SubResource("StandardMaterial3D_ka2rb")

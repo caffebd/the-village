@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dxvd23akn6xks"]
+
+[ext_resource type="Shader" uid="uid://w6txq28c5nva" path="res://assets/materials/shaderMat/fern.tres" id="1_wa6l6"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_wa6l6")

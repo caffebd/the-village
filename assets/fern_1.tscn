@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwldiap5rvvwv"]
+
+[ext_resource type="PackedScene" uid="uid://idbxesj0xahm" path="res://assets/imported/fern1.glb" id="1_xn76e"]
+[ext_resource type="Texture2D" uid="uid://dh41lijlkqvga" path="res://assets/textures/LadyFern05_2K/TexturesCom_Forest_LadyFern05_2K_albedo.png" id="2_ltl0j"]
+[ext_resource type="Texture2D" uid="uid://bis44r7awah2b" path="res://assets/textures/LadyFern05_2K/TexturesCom_Forest_LadyFern05_2K_normal.jpg" id="3_eo4yw"]
+[ext_resource type="Texture2D" uid="uid://dtjoap6a8bmoe" path="res://assets/textures/LadyFern05_2K/TexturesCom_Forest_LadyFern05_2K_roughness.jpg" id="4_mxvwq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4pdxm"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_ltl0j")
+roughness_texture = ExtResource("4_mxvwq")
+normal_enabled = true
+normal_texture = ExtResource("3_eo4yw")
+
+[node name="fern1" instance=ExtResource("1_xn76e")]
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_002" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_003" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_004" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_005" parent="." index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_006" parent="." index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_007" parent="." index="6"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_008" parent="." index="7"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_010" parent="." index="8"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")
+
+[node name="TexturesCom_Forest_LadyFern05_2K_alpha_009" parent="." index="9"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4pdxm")

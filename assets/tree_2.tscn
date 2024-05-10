@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccvbx8n7w0vsh"]
+
+[ext_resource type="ArrayMesh" uid="uid://dv8yfvhw2wlwd" path="res://assets/tree2/tree2.obj" id="1_pb3ik"]
+[ext_resource type="Shader" uid="uid://cqto2eea3axkw" path="res://assets/materials/shaderMat/leaves1.tres" id="2_7877b"]
+[ext_resource type="Material" uid="uid://tn0kwu481fg6" path="res://assets/materials/bark_1.tres" id="3_w86qs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_em3kv"]
+render_priority = 0
+shader = ExtResource("2_7877b")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Tree2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_pb3ik")
+surface_material_override/0 = SubResource("ShaderMaterial_em3kv")
+surface_material_override/1 = ExtResource("3_w86qs")
