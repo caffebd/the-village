@@ -72,6 +72,8 @@ func _input(event):
 		else:
 			use_cursor = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if Input.is_action_just_pressed("torch"):
+		%SpotLight3D.visible = !%SpotLight3D.visible
 
 
 	
