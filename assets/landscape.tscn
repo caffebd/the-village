@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://hxhq06jds1l0"]
+[gd_scene load_steps=10 format=3 uid="uid://hxhq06jds1l0"]
 
 [ext_resource type="PackedScene" uid="uid://pt5am0lyd64k" path="res://assets/imported/landscape.glb" id="1_dwpy0"]
-[ext_resource type="Texture2D" uid="uid://d2q7q07qhrxvw" path="res://assets/textures/grass_wild_pjwgW0/pjwgW_2K_Albedo.jpg" id="2_f34qw"]
+[ext_resource type="Texture2D" uid="uid://bvympsk6r6g6w" path="res://assets/textures/ground_forest_sfjmafua/sfjmafua_2K_Albedo.jpg" id="2_0uyuu"]
+[ext_resource type="Texture2D" uid="uid://ho1sv1lrr7rs" path="res://assets/textures/ground_forest_sfjmafua/sfjmafua_2K_Normal.jpg" id="3_qb2hd"]
+[ext_resource type="Texture2D" uid="uid://bgsj6vruscin" path="res://assets/textures/ground_forest_sfjmafua/sfjmafua_2K_Roughness.jpg" id="4_x40xd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yqypv"]
 resource_name = "Material.001"
@@ -43,8 +45,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rmvv2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hweq1"]
-albedo_texture = ExtResource("2_f34qw")
+albedo_texture = ExtResource("2_0uyuu")
+roughness_texture = ExtResource("4_x40xd")
 normal_enabled = true
+normal_texture = ExtResource("3_qb2hd")
 ao_enabled = true
 uv1_scale = Vector3(150, 150, 150)
 
@@ -60,5 +64,4 @@ surface_material_override/0 = SubResource("StandardMaterial3D_hweq1")
 [node name="StaticBody3D" type="StaticBody3D" parent="Plane" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D" index="0"]
-visible = false
 shape = SubResource("ConcavePolygonShape3D_dswhn")
