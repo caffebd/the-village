@@ -16,6 +16,7 @@ shader_parameter/bottom_strenth = 3.0
 
 [node name="screenEffects" type="ColorRect" parent="."]
 auto_translate_mode = 1
+visible = false
 material = SubResource("ShaderMaterial_6eoci")
 offset_left = -173.0
 offset_top = -99.0
