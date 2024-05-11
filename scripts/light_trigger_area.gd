@@ -1,16 +1,22 @@
 extends Area3D
 
-@export var day_to_night: bool = true
-@export var night_to_day: bool = false
+@export var trigger_number:int = 0
+
+var trigger_array:Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if  day_to_night == false and night_to_day == false:
-		day_to_night = true
-		night_to_day = false
-	elif day_to_night == true and night_to_day == true:
-		day_to_night = true
-		night_to_day = false
+	trigger_array.append("time_transition_0")
+	trigger_array.append("time_transition_1")
+	trigger_array.append("time_transition_2")
+	trigger_array.append("time_transition_3")
+	trigger_array.append("time_transition_4")
+	trigger_array.append("time_transition_5")
+	trigger_array.append("time_transition_6")
+	trigger_array.append("time_transition_7")
+	trigger_array.append("time_transition_8")
+	trigger_array.append("time_transition_9")
+
 	
 
 
@@ -18,7 +24,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		if day_to_night:
-			GlobalSignals.emit_signal("day_to_night")
-		elif night_to_day:
-			GlobalSignals.emit_signal("night_to_day")
+		if trigger_number < trigger_array.size():
+			var trigger_to_use = trigger_array[trigger_number]
+			print (trigger_to_use)
+			GlobalSignals.emit_signal(trigger_to_use)

@@ -37,9 +37,8 @@ lunge_marker = NodePath("Head/PlayerCam/LungeMarker")
 [node name="environment" parent="." instance=ExtResource("5_pe0bv")]
 
 [node name="LightTriggerArea" parent="." instance=ExtResource("6_iihf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69215, 2.11103, -4.86102)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69215, 2.11103, -4.76172)
 
 [node name="LightTriggerArea2" parent="." instance=ExtResource("6_iihf0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69215, 2.11103, 4.33991)
-day_to_night = false
-night_to_day = true
+trigger_number = 1
