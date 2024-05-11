@@ -20,6 +20,10 @@ run/main_scene="res://village.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalSignals="*res://autoload/global_signals.gd"
+
 [display]
 
 window/size/mode=2
