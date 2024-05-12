@@ -5,7 +5,7 @@ extends CharacterBody3D
 
 
 var target_position: Vector3 #set this to the target coordinate
-var speed: float = 2.0
+var speed: float = 1.0
 
 var check_index:int = 0
 
@@ -16,10 +16,12 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var anim_tree = %AnimationTree
 
 var turn_value :float = 0
+var sitting_value: float = 0
+var sit_down_value: float = 0
 
 var can_turn: bool = true
 
-enum {WALK, TURN}
+enum {WALK, TURN, SITDOWN, SITTING}
 
 var curr_anim = WALK
 
@@ -36,17 +38,33 @@ func _ready() -> void:
 
 func _update_tree():
 	anim_tree["parameters/BlendTurn/blend_amount"] = turn_value
+	anim_tree["parameters/SitDown/blend_amount"] = sit_down_value
+	anim_tree["parameters/Sitting/blend_amount"] = sitting_value
 
 func _handle_animation(delta):
 	match curr_anim:
 		
 		WALK:
 			turn_value = lerp(turn_value, 0.0, blend_speed_two*delta)
+			sit_down_value = lerp(sit_down_value, 0.0, blend_speed*delta)
+			sitting_value = lerp(sitting_value, 0.0, blend_speed*delta)
 			_update_tree()
 		TURN:
 			turn_value = lerp(turn_value, 1.0, blend_speed*delta)
+			sit_down_value = lerp(sit_down_value, 0.0, blend_speed*delta)
+			sitting_value = lerp(sitting_value, 0.0, blend_speed*delta)
 			_update_tree()
-
+		SITDOWN:
+			sit_down_value = lerp(sit_down_value, 1.0, blend_speed*delta)
+			turn_value = lerp(turn_value, 0.0, blend_speed*delta)
+			sitting_value = lerp(sitting_value, 0.0, blend_speed*delta)
+			_update_tree()
+		SITTING:
+			sit_down_value = lerp(sit_down_value, 0.0, blend_speed*delta)
+			turn_value = lerp(turn_value, 0.0, blend_speed*delta)
+			sitting_value = lerp(sitting_value, 1.0, blend_speed*delta)
+			_update_tree()
+			
 func _physics_process(delta: float) -> void:
 	
 	_handle_animation(delta)
@@ -88,6 +106,11 @@ func _physics_process(delta: float) -> void:
 			#$AnimationPlayer2.play("mixamo_com")
 			walking = false
 			_next_position()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("sit"):
+		walking = false
+		curr_anim = SITTING
 
 func _next_position():
 	if check_index < check_points.size():

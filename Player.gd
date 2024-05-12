@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const WALK_SPEED:float = 1.25
+const WALK_SPEED:float = 0.75
 
 const JUMP_VELOCITY:float = 4.5
 #const SENSITIVITY:float = 0.003
