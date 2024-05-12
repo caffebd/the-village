@@ -5,9 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dsts1ddor3ms6" path="res://assets/textures/grass1/grass1_rough.jpg" id="3_ndtr6"]
 
 [resource]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
+transparency = 1
 albedo_color = Color(0.780702, 0.780702, 0.780702, 1)
 albedo_texture = ExtResource("1_pj58d")
 roughness_texture = ExtResource("3_ndtr6")

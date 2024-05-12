@@ -1,17 +1,12 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://fs7drrtc388s"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r6ahc"]
-load_path = "res://.godot/imported/oiloS_4K_Albedo.jpg-517f23d1403498cf1b6c8198f5f8e02c.s3tc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ihu1x"]
-load_path = "res://.godot/imported/oiloS_4K_Normal.jpg-33ccdc3c66cc90722ce8fe535b5f3a91.s3tc.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_alad4"]
-load_path = "res://.godot/imported/oiloS_4K_Roughness.jpg-c23157fa136e7353e84dd337df8c798f.s3tc.ctex"
+[ext_resource type="Texture2D" uid="uid://bxv27fd4xlgfe" path="res://assets/textures/grass_patchy_xbreagf/xbreagf_2K_Albedo.jpg" id="1_dxw0c"]
+[ext_resource type="Texture2D" uid="uid://b1txmgqrwc36o" path="res://assets/textures/grass_patchy_xbreagf/xbreagf_2K_Normal.jpg" id="2_nx1qs"]
+[ext_resource type="Texture2D" uid="uid://c7nipqlkkno35" path="res://assets/textures/grass_patchy_xbreagf/xbreagf_2K_Roughness.jpg" id="3_e5o25"]
 
 [resource]
-albedo_texture = SubResource("CompressedTexture2D_r6ahc")
-roughness_texture = SubResource("CompressedTexture2D_alad4")
+albedo_texture = ExtResource("1_dxw0c")
+roughness_texture = ExtResource("3_e5o25")
 normal_enabled = true
-normal_texture = SubResource("CompressedTexture2D_ihu1x")
-uv1_scale = Vector3(150, 150, 150)
+normal_texture = ExtResource("2_nx1qs")
+uv1_scale = Vector3(6, 6, 6)
