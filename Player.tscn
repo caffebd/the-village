@@ -15,7 +15,6 @@ rotate_marker = NodePath("RotateMarker")
 lunge_marker = NodePath("Head/PlayerCam/LungeMarker")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("CapsuleMesh_pdoig")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

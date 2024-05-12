@@ -110,6 +110,9 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("sit"):
 		walking = false
+		var tween = create_tween()
+		tween.tween_property(self, "rotation_degrees:y", 90.0, 1.0)
+		#rotation_degrees.y = lerp(rotation_degrees.y, rotation_degrees.y+90.0, 0.2)
 		curr_anim = SITTING
 
 func _next_position():
