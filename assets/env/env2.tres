@@ -20,5 +20,5 @@ fog_density = 0.5426
 fog_depth_begin = -27.0
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.082
-volumetric_fog_emission = Color(0.0604856, 0.152675, 0.134022, 1)
+volumetric_fog_emission = Color(0.0666768, 0.170878, 0.204777, 1)
 volumetric_fog_length = 54.85
